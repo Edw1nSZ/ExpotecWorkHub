@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colours.css">
+    <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'>
+    <title>Boveda</title>
+</head>
+<body style="background-color: black;">
+    <div class="containerI">   
+            <a href="" class="neonText">Volver</a>
+    </div>
+    <br>
+    <!--Codigo para informacion Pagina-->
+    <div class="content">
+        <div class="Cuadro">
+            <div class="text-content">
+                <h2><b>¿Qué es WorkHub?</b></h2>
+                <p>WorkHub es una pagina web que busca agilizar la busqueda de empleo tanto 
+                    personas que desean tener su primer experiencia laboral a personas que buscan
+                    un nuevo empleo. El usuario que desea utilizar este servicio, creando una nueva
+                    cuenta se le solicitaran datos que funcionaran como su curriculum personal, el cual
+                    se puede actualizar, si por ejemplo este usuario consiguió un título y desea asignarlo
+                    a su perfil este facilmente podrá asignarlo a su cuenta.
+                </p>
+            </div>
+        </div>
+        <img src="img/GT7icon.png" alt="Logo" class="Cuadro-image">
+    </div>
+
+    <!--codigo para personajes del grupo-->
+    <br>
+    <div class="DatosGrupo">
+        <div class="fundador">
+            <img src="img/fernando.png" alt="Fundador 1" class="fundador-image">
+            <h3>Fernando Cuyun</h3>
+            <p>Contacto:</p>
+            <h4>
+                Email: fercho@ejemplo.com
+                <br>Tel: 5421-6321
+            </h4>
+        </div>
+        <div class="fundador">
+            <img src="img/oscar.jpg" alt="Fundador 2" class="fundador-image">
+            <h3>Oscar Boj</h3>
+            <p>Contacto:</p>
+            <h4>
+                Email: OscarB@ejemplo.com
+                <br>Tel: 5421-6321
+            </h4>
+        </div>
+        <div class="fundador">
+            <img src="img/javier.jpg" alt="Fundador 3" class="fundador-image">
+            <h3>Javier Juchuña</h3>
+            <p>Contacto:</p>
+            <h4>
+                Email: Juchu@ejemplo.com
+                <br>Tel: 5421-6321
+            </h4>
+        </div>
+        <div class="fundador">
+            <img src="img/jared.jpg" alt="Fundador 4" class="fundador-image">
+            <h3>Jared Gutierrez</h3>
+            <p>Contacto:</p>
+            <h4>
+                Email: JGuti@ejemplo.com
+                <br>Tel: 5421-6321
+            </h4>
+        </div>
+        <div class="fundador">
+            <img src="img/steve.jpg" alt="Fundador 5" class="fundador-image">
+            <h3>Steve Cruz</h3>
+            <p>Contacto: </p>
+            <h4>
+                Email: Rx@ejemplo.com
+                <br>Tel: 5421-6321
+            </h4>
+        </div>
+        <script>
+            document.querySelectorAll('.fundador').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.toggle('expanded');
+                });
+                card.addEventListener('mouseleave', function() {
+                this.classList.remove('expanded');
+                });
+            });
+        </script>
+    </div>
+
+    <!-- Codigo Footer y derechos de autor -->
+    <footer class="footer">
+        <div class="footer-izquierda">
+            <p>Derechos Reservados <!-- &copy; --> 2024</p>
+        </div>
+        <div class="footer-centro">
+            <p>WorkHub</p>
+        </div>
+        <div class="footer-derecha">
+            <p>Hecho por RxStudios</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
