@@ -1,56 +1,68 @@
-/*Style for the header part of my page*/
-.body{
+/* Estilos generales */
+body {
     background-color: #000000;
-  }
-  /*style text on neon*/
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style for neon text */
 .neonText {
     color: #fff;
     text-shadow:
-    0 0 4px #575757,
-    0 0 11px #000000,
-    0 0 19px #000000,
-    0 0 40px #016cdf,
-    0 0 80px #016cdf,
-    0 0 90px #016cdf,
-    0 0 100px #016cdf,
-    0 0 150px #016cdf;
-  }
-  
-  
-  a, h2 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        0 0 4px #575757,
+        0 0 11px #000000,
+        0 0 19px #000000,
+        0 0 40px #016cdf,
+        0 0 80px #016cdf,
+        0 0 90px #016cdf,
+        0 0 100px #016cdf,
+        0 0 150px #016cdf;
+    font-size: 4.2rem;
     font-weight: 100;
     line-height: 1;
     text-decoration: none;
-    line-height: 1;
+    position: absolute;
     top: 10px;
     left: 10px;
-  }
-    
-  a {
-      font-size: 4.2rem;
-  }
-    
-  h2 {
-      font-size: 1.8rem;
-  }
-  /*image for the banner*/
-  .containerI {
+}
+
+h2 {
+    font-weight: 100;
+    line-height: 1;
+    font-size: 1.8rem;
+}
+
+/* Image for the banner */
+.containerI {
     margin-top: 0px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)), url('img/headimg.jpg');
     background-size: cover; 
     background-position: center;
     padding: 45px;
-  }
-/*Cuadros para Informacion principal*/
+    position: relative;
+}
+
+/* Cuadros para Informacion principal */
 .content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
 }
+
+.content-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .Cuadro {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 15px;
@@ -66,46 +78,48 @@
 .Cuadro h2 {
     margin: 10px 0 0;
     font-size: 30px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
 
 .Cuadro p {
     margin: 20px 0 0;
     font-size: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
 }
 
-.content-image {
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 10px;
+.imagen {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 15px;
+    display: block;
+    margin: 20px;
 }
 
-/*Css para presentacion*/
+/* Css para presentacion */
 .DatosGrupo {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
-    
 }
 
 .fundador {
     background-color: #f0f0f0;
     border-radius: 15px;
     padding: 20px;
-    margin: 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    box-shadow: 0 6px 10px #959595;
     text-align: center;
     width: 200px;
-    box-shadow: 0 6px 10px #959595;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 200px; /* Altura inicial */
 }
 
 .fundador.expanded {
     transform: scale(1.1);
+    max-height: 400px; /* Altura expandida */
 }
 
 .fundador-image {
@@ -118,29 +132,25 @@
 .fundador h3 {
     margin: 10px 0 0;
     font-size: 25px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
 }
 
 .fundador h4 {
     font-size: 15px;
-    font-family:'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
     display: none;
 }
 
 .fundador p {
     margin: 20px 0 0;
     font-size: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: none;
+    display: flex;
 }
 
 .fundador.expanded h4,
 .fundador.expanded p {
     display: block;
 }
-/*estilos para el footer*/
+
+/* Estilos para el footer */
 .footer {
     background-color: #333;
     color: #fff;
@@ -168,14 +178,47 @@
     text-align: right;
 }
 
-/* Asegurarse de que el footer esté al final de la página */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+.Equipotitle {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 400%;
+    margin: 20px 0;
 }
 
-.container, .content, .people-cards {
-    flex: 1;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .DatosGrupo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fundador {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-izquierda,
+    .footer-centro,
+    .footer-derecha {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .neonText {
+        font-size: 2.5rem;
+        top: 20px;
+        left: 20px;
+    }
+
+    .content-group {
+        flex-direction: column;
+    }
+
+    .imagen {
+        margin: 0 auto 20px;
+    }
 }
