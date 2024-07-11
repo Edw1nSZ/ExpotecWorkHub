@@ -7,19 +7,11 @@ body {
     min-height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-/* Style for neon text */
+/*Texto  Volver Neon*/
 .neonText {
     color: #fff;
     text-shadow:
-        0 0 4px #575757,
-        0 0 11px #000000,
-        0 0 19px #000000,
-        0 0 40px #016cdf,
-        0 0 80px #016cdf,
-        0 0 90px #016cdf,
-        0 0 100px #016cdf,
-        0 0 150px #016cdf;
+        0 0 4px #575757, 0 0 11px #000000, 0 0 19px #000000, 0 0 40px #016cdf, 0 0 80px #016cdf, 0 0 90px #016cdf, 0 0 100px #016cdf,  0 0 150px #016cdf;
     font-size: 4.2rem;
     font-weight: 100;
     line-height: 1;
@@ -35,7 +27,7 @@ h2 {
     font-size: 1.8rem;
 }
 
-/* Image for the banner */
+/* Imagen Banner */
 .containerI {
     margin-top: 0px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)), url('img/headimg.jpg');
@@ -114,12 +106,12 @@ h2 {
     cursor: pointer;
     transition: transform 0.3s ease, max-height 0.3s ease-in-out;
     overflow: hidden;
-    max-height: 200px; /* Altura inicial */
+    max-height: 200px;
 }
 
 .fundador.expanded {
     transform: scale(1.1);
-    max-height: 400px; /* Altura expandida */
+    max-height: 400px;
 }
 
 .fundador-image {
@@ -150,42 +142,9 @@ h2 {
     display: block;
 }
 
-/* Estilos para el footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
 
-.footer-izquierda,
-.footer-centro,
-.footer-derecha {
-    flex: 1;
-    text-align: center;
-}
 
-.footer-izquierda {
-    text-align: left;
-}
-
-.footer-derecha {
-    text-align: right;
-}
-
-.Equipotitle {
-    color: #f0f0f0;
-    text-align: center;
-    font-size: 400%;
-    margin: 20px 0;
-}
-
-/* Responsive Design */
+/* HAcer Responsive la pagina */
 @media (max-width: 768px) {
     .DatosGrupo {
         flex-direction: column;
@@ -221,4 +180,39 @@ h2 {
     .imagen {
         margin: 0 auto 20px;
     }
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-izquierda,
+.footer-centro,
+.footer-derecha {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-izquierda {
+    text-align: left;
+}
+
+.footer-derecha {
+    text-align: right;
+}
+
+.Equipotitle {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 400%;
+    margin: 20px 0;
 }
